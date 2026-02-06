@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Star Wars Character / Movie </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="css/grid.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="hidden">Star Wars Character and Movie Guide</h1>
+
+    <header>
+        <section class="grid-con">
+            <h2 class="hidden">header</h2>
+
+            <div class="col-span-4 m-col-span-4 l-col-span-4">
+                <h2 class="header-name">Star Wars Guide</h2>
+            </div>
+
+            <nav class="col-span-4 m-col-span-4 l-col-span-4 desktop-nav">
+                <h2 class="hidden">desktop-nav</h2>
+                <ul class="main-nav">
+                    <li><a href="#characters">Characters</a></li>
+                    <li><a href="#movie">Movie</a></li>
+                </ul>
+            </nav>
+
+            <div class="col-span-4 m-col-span-4 l-col-span-4 header-right">
+                <p class="header-note">Pick a character and load the movie!</p>
+            </div>
+
+            <button id="hamburger" class="mobile" aria-label="Open menu">&#9776;</button>
+        </section>
+    </header>
+
+    <div id="menu" class="overlay" aria-hidden="true">
+        <h2 class="hidden">overlay</h2>
+        <button id="close" aria-label="Close menu">&times;</button>
+
+        <nav>
+            <ul>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#movie">Movie</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="grid-con">
+            <h2 class="hidden">main content</h2>
+            <section id="characters" class="col-span-full m-col-span-8 l-col-span-8">
+                <div class="info-panel">
+                    <h2>Characters</h2>
+                    <p class="status" id="people-status" aria-live="polite"></p>
+
+                    <div id="character-box" class="character-box">
+                    </div>
+                </div>
+            </section>
+            <section id="movie" class="col-span-full m-col-span-4 l-col-span-4">
+                <div class="info-panel">
+                    <h2>Movie</h2>
+                    <p class="status" id="movie-status" aria-live="polite"></p>
+
+                    <section id="movie-con">
+                        <p class="hint">Choose a character to load a movie</p>
+                    </section>
+
+                    <template id="movie-template">
+                        <div class="movie-card">
+                            <img class="movie-poster" alt="">
+                            <div class="movie-text">
+                                <h3 class="movie-title"></h3>
+                                <p class="movie-meta"></p>
+                                <pre class="movie-crawl"></pre>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section class="grid-con">
+            <h2 class="hidden">footer</h2>
+            <div class="col-span-full footer_div">
+                <p class="footer-text">&Star Wars</p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
