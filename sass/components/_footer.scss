@@ -1,0 +1,16 @@
+footer {
+  padding: 14px 0 22px 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.35);
+}
+
+.footer_div {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  margin: 0;
+  color: rgba(233,238,245,0.75);
+  font-size: 13px;
+}

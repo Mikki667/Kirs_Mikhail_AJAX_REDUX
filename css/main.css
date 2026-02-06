@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: "Orbitron", Arial, sans-serif;
+  color: #e9eef5;
+  background-color: #05070c;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+header {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.header-name {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  color: #ffe15a;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 26px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #e9eef5;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.main-nav a:hover {
+  color: #ffe15a;
+}
+
+.header-note {
+  margin: 0;
+  color: rgba(233, 238, 245, 0.75);
+  font-size: 13px;
+  text-align: right;
+}
+
+#hamburger {
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #e9eef5;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hamburger:hover {
+  color: #ffe15a;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.92);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.overlay.open {
+  display: flex;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 44px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.overlay li {
+  margin: 18px 0;
+}
+
+.overlay a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+}
+
+.overlay a:hover {
+  color: #ffe15a;
+}
+
+@media (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+footer {
+  padding: 14px 0 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.footer_div {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  margin: 0;
+  color: rgba(233, 238, 245, 0.75);
+  font-size: 13px;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  border-top-color: #ffe15a;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.info-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.info-panel h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #e9eef5;
+}
+
+.status {
+  margin: 0 0 12px 0;
+  color: rgba(233, 238, 245, 0.75);
+  font-size: 13px;
+  min-height: 16px;
+}
+
+.hint {
+  margin: 0;
+  color: rgba(233, 238, 245, 0.75);
+}
+
+.character-box {
+  max-height: 560px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+#character-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#character-box li {
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+#character-box a {
+  display: block;
+  padding: 12px 14px;
+  color: #ffe15a;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+#character-box li:hover {
+  background: rgba(255, 225, 90, 0.08);
+}
+
+.movie-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.movie-title {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: #ffe15a;
+  letter-spacing: 0.4px;
+}
+
+.movie-meta {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: rgba(233, 238, 245, 0.75);
+}
+
+.movie-crawl {
+  margin: 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  white-space: pre-wrap;
+  line-height: 1.6;
+  max-height: 240px;
+  overflow: auto;
+}/*# sourceMappingURL=main.css.map */
